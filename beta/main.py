@@ -31,6 +31,27 @@ if __name__ == '__main__':
     print("VRAI : ", v)
     print(reverse(1534236469))
 
+    print("without if : ", [x**3 for x in range(6)])
+    print("with if : ", [x**3 for x in range(6) if x % 2 == 0])
+
+    mytuple = ()
+    mydict = {}
+    mylist = []
+    print("mytuple : ", type(mytuple))
+    print("mydict : ", type(mydict))
+    print("mylist : ", type(mylist))
+
+    print("mylist : ", type(mylist))
+    print("========================")
+    mytuple = ("apple", "banana", "cherry")
+    myit = iter(mytuple)
+
+    print(next(myit))
+    print(next(myit))
+    print(next(myit))
+
+
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
