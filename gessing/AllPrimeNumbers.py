@@ -15,3 +15,15 @@ class AllPrimeNumbers:
                 j += 1
 
         return len([num for num in arr if num == 0])
+
+    def mySqrt(self, x: int) -> int:
+        if x == 0:
+            return 0
+        n = x / 2
+        n1 = 0.0
+        while (True):
+            n1 = x / n
+            n = (n + n1) / 2
+            if (n - n1 < 0.00001 and n - n1 > -0.00001):
+                return int(n)
+        return 0
