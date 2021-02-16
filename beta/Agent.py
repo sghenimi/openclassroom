@@ -1,5 +1,6 @@
 import json
 import math
+import os
 
 class Agent:
 
@@ -50,12 +51,28 @@ class Zone:
 
 def go_main():
 
-    for agent_attributes in json.load(open("files/agents-100k.json")):
-        latitude = agent_attributes.pop("latitude")
-        longitude = agent_attributes.pop("longitude")
-        position = Position(latitude, longitude)
-        agent = Agent(position, **agent_attributes)
-        Zone.initialize_zones()
+    # for agent_attributes in json.load(open("files/agents-100k.json")):
+    #     latitude = agent_attributes.pop("latitude")
+    #     longitude = agent_attributes.pop("longitude")
+    #     position = Position(latitude, longitude)
+    #     agent = Agent(position, **agent_attributes)
+    #     Zone.initialize_zones()
+
+    if os.path.exists("files/sample"):
+        print("=> the file exists")
+    else:
+        print("=> the file will be created")
+    f = open("files/sample.txt", "w")
+
+    for i in range(5):
+        f.write(f"{i} : Use the pass keyword when you do not want to add any other properties or methods to the class.\n")
+    print("got it !")
+    f.close()
+
+    f = open("files/sample.txt")
+    print(f.read())
+
+
 
 
 go_main()
