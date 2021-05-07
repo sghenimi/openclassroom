@@ -1,8 +1,9 @@
-# cracking-Coding-Interview
+#Notes
+# https://www.hackerrank.com/
 # www.codingame.com
-# https://the-algorithms.com/
 # https://leetcode.com/
 # https://adventofcode.com/
+# https://the-algorithms.com/
 
 n = int(input().strip())
     
