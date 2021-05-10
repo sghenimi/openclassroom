@@ -31,4 +31,14 @@ def print_even_odd_1(s_original):
 def print_even_odd_3(s_original):
     print([x for x in s_original if x%2 == 0], [x for x in s_original if x%2 != 0])
 
-print_even_odd_3([10, 33, 2, 5, 6, 7, 71])
+#print_even_odd_3([10, 33, 2, 5, 6, 7, 71])
+
+def myfunc(a, b):
+  return a + b
+
+x = map(myfunc, ('apple', 'banana', 'cherry'), ('orange', 'lemon', 'pineapple'))
+
+print(x)
+
+#convert the map into a list, for readability:
+print(list(x))
