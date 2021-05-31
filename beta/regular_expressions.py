@@ -26,4 +26,24 @@ s = """date 0 : 14/9/2000
 expression = re.compile("([0-3]?[0-9]/[0-1]?[0-9]/([0-2][0-9])?[0-9][0-9])")
 # seconde étape : recherche
 res = expression.findall(s)
-print(res)
+#print(res)
+
+# MATCH
+line = "Cats are smarter than dogs"
+matchObj = re.match( r'(.*) are (.*?) .*', line, re.M|re.I)
+if matchObj:
+   print ("matchObj.group() : ", matchObj.group())
+   print ("matchObj.group(1) : ", matchObj.group(1))
+   print ("matchObj.group(2) : ", matchObj.group(2))
+else:
+   print ("No match!!")
+
+# SEARCH
+searchObj = re.search( r'(.*) are (.*?) .*', line, re.M|re.I)
+
+if searchObj:
+   print "searchObj.group() : ", searchObj.group()
+   print "searchObj.group(1) : ", searchObj.group(1)
+   print "searchObj.group(2) : ", searchObj.group(2)
+else:
+   print "Nothing found!!"
